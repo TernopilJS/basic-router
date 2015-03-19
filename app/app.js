@@ -1,5 +1,5 @@
 Router.route('home', {
-  path: '/:newsLimit?',
+  path: /^\/news\/(\d*)/,
   template: 'Home',
   data: function() {
     var news = [{
@@ -16,7 +16,7 @@ Router.route('home', {
       text: 'Meteor 1.0'
     }];
     return {
-      news: news.slice(0, this.params.newsLimit)
+      news: news.slice(0, this.params[0])
     };
   }
 });
