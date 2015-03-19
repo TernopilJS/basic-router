@@ -1,8 +1,8 @@
 Router.route('home', {
-  path: '/',
+  path: '/:newsLimit',
   template: 'Home',
-  data: {
-    news: [{
+  data: function() {
+    var news = [{
       dateTime: 'December 19, 2014',
       text: 'December Devshop SF: Advances in MongoDB scalability, Meteor + Polymer, reactive MySQL, and more'
     }, {
@@ -14,7 +14,10 @@ Router.route('home', {
     }, {
       dateTime: 'October 28, 2014',
       text: 'Meteor 1.0'
-    },]
+    }];
+    return {
+      news: news.slice(0, this.params.newsLimit)
+    };
   }
 });
 
