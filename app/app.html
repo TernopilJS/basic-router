@@ -4,26 +4,3 @@
 
 <body>
 </body>
-
-<template name="Home">
-  Welcome on home page!
-  <ul>
-    {{#each news}}
-      <li>
-        <small>
-          <b>{{dateTime}}:</b>
-        </small>
-        {{text}}
-      </li>
-    {{/each}}
-  </ul>
-</template>
-
-<template name="AboutUs">
-  About us.
-  <p>
-    <a href="{{pathFor 'home'}}">Go home #1</a>
-    |
-    <a href="{{urlFor 'home'}}">Go home #2</a>
-  </p>
-</template>
