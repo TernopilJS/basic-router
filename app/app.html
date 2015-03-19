@@ -7,6 +7,16 @@
 
 <template name="Home">
   Welcome on home page!
+  <ul>
+    {{#each news}}
+      <li>
+        <small>
+          <b>{{dateTime}}:</b>
+        </small>
+        {{text}}
+      </li>
+    {{/each}}
+  </ul>
 </template>
 
 <template name="AboutUs">
