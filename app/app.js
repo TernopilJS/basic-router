@@ -1,5 +1,5 @@
 Router.route('home', {
-  path: '/:newsLimit',
+  path: '/:newsLimit?',
   template: 'Home',
   data: function() {
     var news = [{
