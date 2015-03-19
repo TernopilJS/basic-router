@@ -1,4 +1,11 @@
 Router.route('home', {
+  path: '/',
+  action: function() {
+    this.redirect('/news/3');
+  }
+});
+
+Router.route('news', {
   path: /^\/news\/(\d*)/,
   template: 'Home',
   data: function() {
