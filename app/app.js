@@ -18,6 +18,9 @@ Router.route('home', {
     return {
       news: news.slice(0, this.params[0])
     };
+  },
+  action: function() {
+    this.render();
   }
 });
 
